@@ -1,0 +1,167 @@
+/* ============================================================
+   SCREENSHOTS.CSS — VS Code editor mock styles
+   ============================================================ */
+
+/* Window chrome */
+.vsc-window, .android-window {
+  width: 100%;
+  height: 100%;
+  background: #1e1e2e;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+}
+.vsc-titlebar {
+  background: #181825;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  flex-shrink: 0;
+}
+.vsc-dots { display: flex; gap: 5px; }
+.vd { width: 11px; height: 11px; border-radius: 50%; }
+.vd.r { background: #ff5f57; }
+.vd.y { background: #febc2e; }
+.vd.g { background: #28c840; }
+.vsc-title { font-size: 11px; color: rgba(255,255,255,0.4); margin-left: 6px; font-family: 'DM Sans', sans-serif; }
+
+/* Body layout */
+.vsc-body, .android-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Sidebar */
+.vsc-sidebar {
+  width: 148px;
+  background: #181825;
+  border-right: 1px solid rgba(255,255,255,0.05);
+  padding: 8px 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+.vsc-dir {
+  font-size: 9px;
+  color: rgba(255,255,255,0.3);
+  padding: 6px 10px 3px;
+  letter-spacing: 0.08em;
+  font-family: 'DM Sans', sans-serif;
+}
+.vsc-file {
+  font-size: 10px;
+  color: rgba(255,255,255,0.45);
+  padding: 3px 10px;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.active-file { background: rgba(0,217,255,0.08); color: rgba(255,255,255,0.85); }
+.vsc-file.dim { color: rgba(255,255,255,0.25); }
+
+/* Code area */
+.vsc-editor {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  background: #1e1e2e;
+  padding: 8px 0;
+}
+.vsc-linenums {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  min-width: 36px;
+  text-align: right;
+  color: rgba(255,255,255,0.18);
+  font-size: 10px;
+  line-height: 1.7;
+  user-select: none;
+  flex-shrink: 0;
+}
+.vsc-linenums span { display: block; }
+.vsc-code {
+  flex: 1;
+  overflow: hidden;
+  padding-right: 8px;
+}
+.cl {
+  line-height: 1.7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Syntax colors */
+.ck  { color: #cba6f7; }   /* keyword — purple */
+.cm  { color: #89dceb; }   /* class/module — cyan */
+.cf  { color: #cdd6f4; }   /* variable — white */
+.cfn { color: #89b4fa; }   /* function name — blue */
+.cs  { color: #a6e3a1; }   /* string — green */
+.cnum{ color: #fab387; }   /* number — orange */
+.ca  { color: #f38ba8; }   /* annotation — red */
+.ci  { color: transparent; }
+.cpunc { color: #9399b2; } /* punctuation — grey */
+.ccomment { color: rgba(255,255,255,0.25); font-style: italic; }
+
+/* Terminal */
+.vsc-terminal {
+  background: #11111b;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  height: 110px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+.term-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  flex-shrink: 0;
+}
+.term-tab {
+  font-size: 9px;
+  font-family: 'DM Sans', sans-serif;
+  color: rgba(255,255,255,0.3);
+  padding: 5px 12px;
+  cursor: default;
+  letter-spacing: 0.05em;
+}
+.active-tt { color: rgba(255,255,255,0.7); border-bottom: 1px solid #00d9ff; }
+.term-body {
+  padding: 5px 10px;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.tl { font-size: 9.5px; line-height: 1.6; color: rgba(255,255,255,0.55); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tp { color: #89b4fa; }   /* prompt */
+.ts { color: #a6e3a1; }   /* success */
+.tw { color: #cdd6f4; }   /* info */
+.ty { color: #fab387; }   /* debug/log */
+.tcursor { color: #00d9ff; animation: blink 1.1s step-end infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+/* Override pf-screenshot to hold the vsc window */
+.pf-screenshot {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.6);
+  aspect-ratio: 16 / 10;
+  position: relative;
+  background: #1e1e2e;
+}

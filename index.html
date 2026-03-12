@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Lalit Gonji – Software Engineer & Full Stack Developer in Sydney, Australia."/>
+  <title>Lalit Gonji | Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="styles/main.css"/>
+</head>
+<body>
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">LG.</a>
+      <div class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#education">Education</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-right">
+        <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html#about" onclick="closeMenu()">About</a>
+    <a href="index.html#skills" onclick="closeMenu()">Skills</a>
+    <a href="projects.html" onclick="closeMenu()">Projects</a>
+    <a href="index.html#experience" onclick="closeMenu()">Experience</a>
+    <a href="index.html#education" onclick="closeMenu()">Education</a>
+    <a href="contact.html" onclick="closeMenu()">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas id="particles-canvas"></canvas>
+    <div class="hero-glow"></div>
+    <div class="hero-grid-bg"></div>
+    <div class="hero-content reveal">
+      <div class="hero-badge">
+        <span class="dot"></span> Available for opportunities · Sydney, AU
+      </div>
+      <h1 class="hero-name">Lalit<br/><span class="grad">Gonji</span></h1>
+      <p class="hero-title">&gt;_ Software Engineer · Full Stack Developer</p>
+      <p class="hero-desc">Full-stack developer who lives across the entire stack. React on the frontend, Node.js on the backend, MySQL in the middle — and a coffee in hand throughout.</p>
+      <div class="hero-cta">
+        <a href="projects.html" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> View Projects</a>
+
+        <a href="contact.html" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+      </div>
+    </div>
+    <div class="hero-scroll"><span>scroll</span><i class="fa-solid fa-chevron-down"></i></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-grid">
+      <!-- PHOTO SIDE -->
+      <div class="about-photo-wrap reveal-left">
+        <div class="photo-ring"></div>
+        <div class="photo-frame" id="photo-frame">
+          <img src="assets/lalit.jpg" alt="Lalit Gonji" class="real-photo" id="real-photo"/>
+        </div>
+        <div class="photo-badge b1"><i class="fa-solid fa-code"></i> Full Stack Dev</div>
+        <div class="photo-badge b2"><i class="fa-brands fa-aws"></i> Cloud</div>
+        <div class="photo-badge b3"><i class="fa-solid fa-location-dot"></i> Sydney</div>
+      </div>
+
+      <!-- TEXT SIDE -->
+      <div class="about-text reveal-right">
+        <p class="section-label">About Me</p>
+        <h2 class="section-title">Crafting Scalable<br/>Software Solutions</h2>
+        <p class="about-p">I'm a Software Engineer with a <strong>Master's degree in Computer Science</strong> from the University of Wollongong. Passionate about building clean, scalable, and impactful applications that make a real difference.</p>
+        <p class="about-p">My expertise spans the full stack — from building responsive React interfaces to designing robust Java/Spring Boot microservices and deploying them on AWS cloud infrastructure.</p>
+        <p class="about-p">Currently based in Sydney, I'm actively looking for Software Engineering opportunities while bringing strong teamwork, communication, and problem-solving skills to every project I touch.</p>
+        <div class="about-tags">
+          <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">React</span>
+          <span class="tag">AWS</span><span class="tag">Full Stack</span><span class="tag">Sydney, AU</span>
+        </div>
+        <div class="about-stats">
+          <div class="stat"><span class="stat-num">6+</span><span class="stat-label">Projects Built</span></div>
+          <div class="stat"><span class="stat-num">2</span><span class="stat-label">Degrees</span></div>
+          <div class="stat"><span class="stat-num">3</span><span class="stat-label">Certifications</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="alt-bg">
+    <div class="section-header reveal">
+      <p class="section-label">Skills & Technologies</p>
+      <h2 class="section-title">Technical Expertise</h2>
+      <p class="section-sub">A curated stack across production projects and personal builds.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal delay-1">
+        <div class="skill-card-head"><i class="fa-solid fa-code"></i> Languages</div>
+        <div class="chips"><span>Java</span><span>Python</span><span>C++</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span></div>
+      </div>
+      <div class="skill-card reveal delay-2">
+        <div class="skill-card-head"><i class="fa-solid fa-layer-group"></i> Frameworks</div>
+        <div class="chips"><span>Spring Boot</span><span>React</span><span>Angular</span><span>Node.js</span><span>REST APIs</span></div>
+      </div>
+      <div class="skill-card reveal delay-3">
+        <div class="skill-card-head"><i class="fa-brands fa-aws"></i> Cloud & Databases</div>
+        <div class="chips"><span>AWS EC2</span><span>AWS S3</span><span>Lambda</span><span>MySQL</span><span>SQL</span><span>Docker</span></div>
+      </div>
+      <div class="skill-card reveal delay-4">
+        <div class="skill-card-head"><i class="fa-solid fa-wrench"></i> Tools</div>
+        <div class="chips"><span>Git</span><span>GitHub</span><span>Linux</span><span>IntelliJ</span><span>VS Code</span><span>Android Studio</span></div>
+      </div>
+      <div class="skill-card reveal delay-5">
+        <div class="skill-card-head"><i class="fa-solid fa-brain"></i> Core Concepts</div>
+        <div class="chips"><span>DSA</span><span>OOP</span><span>Design Patterns</span><span>Agile</span><span>Testing</span><span>Microservices</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS PREVIEW -->
+  <section id="projects-preview">
+    <div class="section-header reveal">
+      <p class="section-label">Featured Work</p>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">A selection of real-world applications — from IoT to cloud-native.</p>
+    </div>
+    <div class="preview-grid">
+      <div class="preview-card reveal delay-1">
+        <div class="preview-ss ss-trolley"></div>
+        <div class="preview-info">
+          <div class="preview-num">01</div>
+          <h3>Smart Trolley System</h3>
+          <p>IoT-powered shopping trolley reducing checkout time by 40% using RFID & Raspberry Pi.</p>
+          <div class="preview-tech"><span>IoT</span><span>RFID</span><span>Arduino</span><span>Python</span></div>
+        </div>
+      </div>
+      <div class="preview-card reveal delay-2">
+        <div class="preview-ss ss-roadside"></div>
+        <div class="preview-info">
+          <div class="preview-num">02</div>
+          <h3>Roadside Assistance App</h3>
+          <p>Android app connecting drivers with nearby help within 5km using real-time GPS.</p>
+          <div class="preview-tech"><span>Java</span><span>Firebase</span><span>Google Maps</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="center-btn reveal">
+      <a href="projects.html" class="btn btn-primary"><i class="fa-solid fa-grid-2"></i> View All 6 Projects</a>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="alt-bg">
+    <div class="section-header reveal">
+      <p class="section-label">Work History</p>
+      <h2 class="section-title">Experience</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-date">2023 — Present</div>
+        <h3 class="tl-title">Customer Service Associate</h3>
+        <p class="tl-company">Pizza Hut · Wollongong, NSW</p>
+        <ul class="tl-points">
+          <li>Delivered excellent service in high-volume environments, sharpening communication skills directly applicable to developer-client collaboration.</li>
+          <li>Collaborated in cross-functional teams to resolve issues efficiently — developing teamwork skills mirrored in Agile development sprints.</li>
+          <li>Thrived under pressure during peak hours — building deadline management and task prioritisation mindset.</li>
+          <li>Developed rapid problem-solving by managing diverse customer scenarios in real time.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-header reveal">
+      <p class="section-label">Academic Background</p>
+      <h2 class="section-title">Education</h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card reveal delay-1">
+        <div class="edu-icon">🎓</div>
+        <div class="edu-degree">Master of Computer Science</div>
+        <div class="edu-school">University of Wollongong · NSW</div>
+        <div class="edu-year">2023 – 2025</div>
+      </div>
+      <div class="edu-card reveal delay-2">
+        <div class="edu-icon">🏛️</div>
+        <div class="edu-degree">Bachelor of IT Engineering</div>
+        <div class="edu-school">University of Mumbai · India</div>
+        <div class="edu-year">2018 – 2022</div>
+      </div>
+      <div class="edu-card reveal delay-3">
+        <div class="edu-icon">📋</div>
+        <div class="edu-degree">Professional Year Program</div>
+        <div class="edu-school">Performance Education · Sydney</div>
+        <div class="edu-year">2025 – present</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="alt-bg">
+    <div class="section-header reveal">
+      <p class="section-label">Credentials</p>
+      <h2 class="section-title">Certifications</h2>
+    </div>
+    <div class="certs-grid">
+      <div class="cert-card reveal delay-1">
+        <div class="cert-icon">💼</div>
+        <div><div class="cert-name">Deloitte Technology Virtual Internship</div><div class="cert-status">✓ Completed · Forage</div></div>
+      </div>
+      <div class="cert-card reveal delay-2">
+        <div class="cert-icon">🏦</div>
+        <div><div class="cert-name">JPMorgan Software Engineering Virtual Internship</div><div class="cert-status">✓ Completed · Forage</div></div>
+      </div>
+      <div class="cert-card reveal delay-3">
+        <div class="cert-icon">☁️</div>
+        <div><div class="cert-name">AWS Software Developer Career Path</div><div class="cert-status">⏳ In Progress</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements">
+    <div class="section-header reveal">
+      <p class="section-label">Beyond Code</p>
+      <h2 class="section-title">Achievements & Activities</h2>
+    </div>
+    <div class="achieve-grid">
+      <div class="achieve-card reveal delay-1"><div class="achieve-emoji">🏆</div><div class="achieve-title">Sports Secretary</div><div class="achieve-sub">University of Mumbai</div></div>
+      <div class="achieve-card reveal delay-2"><div class="achieve-emoji">⚽</div><div class="achieve-title">Football Team Captain</div><div class="achieve-sub">University Team</div></div>
+      <div class="achieve-card reveal delay-3"><div class="achieve-emoji">🏃</div><div class="achieve-title">Sydney Marathon Volunteer</div><div class="achieve-sub">Sydney, Australia</div></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 Lalit Gonji · Built with ❤️ in Sydney</span>
+      <div class="footer-socials">
+        <a href="https://github.com/La-lit2001" target="_blank" class="social-btn"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/lalit-gonji/" target="_blank" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:lalitgonji@gmail.com" class="social-btn"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <button class="back-top" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

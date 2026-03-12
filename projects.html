@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Lalit Gonji</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="styles/main.css"/>
+  <style>
+    #all-projects {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 80px var(--pad);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .proj-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radiusL);
+      padding: 36px 40px;
+      transition: all .3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .proj-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--grad);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .35s;
+    }
+    .proj-card:hover { border-color: var(--border2); transform: translateY(-4px); box-shadow: 0 20px 48px rgba(0,0,0,.35); }
+    .proj-card:hover::before { transform: scaleX(1); }
+    .proj-num { font-family: var(--ff-mono); font-size: .68rem; color: var(--accent); opacity: .6; margin-bottom: 6px; }
+    .proj-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 12px; }
+    .proj-name { font-family: var(--ff-disp); font-size: 1.35rem; font-weight: 800; line-height: 1.1; }
+    .proj-category { font-family: var(--ff-mono); font-size: .7rem; color: var(--accent); background: rgba(0,217,255,.08); border: 1px solid rgba(0,217,255,.2); padding: 5px 12px; border-radius: 100px; white-space: nowrap; flex-shrink: 0; margin-top: 4px; }
+    .proj-desc { color: var(--muted); font-size: .92rem; line-height: 1.75; margin-bottom: 18px; }
+    .proj-impact { display: flex; gap: 28px; margin-bottom: 18px; }
+    .impact-item { display: flex; flex-direction: column; }
+    .impact-val { font-family: var(--ff-disp); font-size: 1.25rem; font-weight: 800; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .impact-key { font-size: .72rem; color: var(--muted); }
+    .proj-tech { display: flex; flex-wrap: wrap; gap: 7px; }
+    .proj-tech span { padding: 4px 11px; font-size: .73rem; font-family: var(--ff-mono); border-radius: 5px; background: var(--bg3); border: 1px solid var(--border); color: var(--muted); transition: all .2s; }
+    .proj-tech span:hover { background: rgba(0,217,255,.08); border-color: var(--accent); color: var(--accent); }
+    @media(max-width:600px) { .proj-card { padding: 24px 20px; } .proj-header { flex-direction: column; } }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">LG.</a>
+      <div class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#education">Education</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-right">
+        <button class="theme-btn" onclick="toggleTheme()"><i class="fa-solid fa-moon" id="theme-icon"></i></button>
+        <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html" onclick="closeMenu()">Home</a>
+    <a href="index.html#skills" onclick="closeMenu()">Skills</a>
+    <a href="contact.html" onclick="closeMenu()">Contact</a>
+  </div>
+
+  <div class="page-hero">
+    <div class="page-hero-content reveal">
+      <p class="section-label">My Work</p>
+      <h1 class="page-title">All Projects</h1>
+      <p class="page-sub">6 real projects spanning IoT, Android, full-stack web, and cloud.</p>
+    </div>
+  </div>
+
+  <section id="all-projects">
+
+    <!-- 01 Smart Trolley -->
+    <div class="proj-card reveal">
+      <div class="proj-num">01 / IoT &middot; Python &middot; Hardware</div>
+      <div class="proj-header">
+        <h2 class="proj-name">Smart Trolley System</h2>
+        <span class="proj-category">IoT</span>
+      </div>
+      <p class="proj-desc">An IoT-powered trolley using RFID scanning on Raspberry Pi. Python reads tag UIDs, queries a SQLite product database, tracks totals in real time, and updates an LCD display — letting shoppers skip the checkout queue entirely.</p>
+      <div class="proj-impact">
+        <div class="impact-item"><span class="impact-val">40%</span><span class="impact-key">Checkout Time Saved</span></div>
+        <div class="impact-item"><span class="impact-val">48</span><span class="impact-key">Products in DB</span></div>
+      </div>
+      <div class="proj-tech"><span>Python</span><span>Raspberry Pi</span><span>Arduino</span><span>RFID</span><span>SQLite</span><span>GPIO</span></div>
+    </div>
+
+    <!-- 02 Roadside -->
+    <div class="proj-card reveal delay-1">
+      <div class="proj-num">02 / Android &middot; Java &middot; Firebase</div>
+      <div class="proj-header">
+        <h2 class="proj-name">Roadside Assistance App</h2>
+        <span class="proj-category">Mobile</span>
+      </div>
+      <p class="proj-desc">Android app in Java connecting stranded drivers to the nearest providers within 5km. Uses Firebase Realtime Database for live updates, Google Maps API for routing, and FusedLocationProvider for accurate GPS.</p>
+      <div class="proj-impact">
+        <div class="impact-item"><span class="impact-val">5km</span><span class="impact-key">Search Radius</span></div>
+        <div class="impact-item"><span class="impact-val">Real-time</span><span class="impact-key">Firebase Sync</span></div>
+      </div>
+      <div class="proj-tech"><span>Java</span><span>Android Studio</span><span>Firebase</span><span>Google Maps API</span><span>GPS</span></div>
+    </div>
+
+    <!-- 03 TaskFlow -->
+    <div class="proj-card reveal delay-2">
+      <div class="proj-num">03 / Full Stack &middot; Spring Boot &middot; React</div>
+      <div class="proj-header">
+        <h2 class="proj-name">TaskFlow &mdash; Project Management App</h2>
+        <span class="proj-category">Web App</span>
+      </div>
+      <p class="proj-desc">Full-stack Kanban app with a Spring Boot REST API backend using JWT auth, JPA/Hibernate with MySQL, and a React frontend. Containerised with Docker for easy deployment.</p>
+      <div class="proj-impact">
+        <div class="impact-item"><span class="impact-val">REST</span><span class="impact-key">Spring Boot API</span></div>
+        <div class="impact-item"><span class="impact-val">JWT</span><span class="impact-key">Secure Auth</span></div>
+      </div>
+      <div class="proj-tech"><span>Java</span><span>Spring Boot</span><span>React</span><span>MySQL</span><span>JWT</span><span>Docker</span></div>
+    </div>
+
+    <!-- 04 ShopNest -->
+    <div class="proj-card reveal delay-3">
+      <div class="proj-num">04 / E-Commerce &middot; AWS &middot; Docker</div>
+      <div class="proj-header">
+        <h2 class="proj-name">ShopNest &mdash; E-Commerce Platform</h2>
+        <span class="proj-category">E-Commerce</span>
+      </div>
+      <p class="proj-desc">Cloud-native e-commerce with product catalogue, cart, and Stripe payment. Spring Boot API containerised with Docker and deployed on AWS EC2. Product images stored in AWS S3. CI/CD via GitHub Actions auto-deploys on every push.</p>
+      <div class="proj-impact">
+        <div class="impact-item"><span class="impact-val">AWS</span><span class="impact-key">EC2 + S3</span></div>
+        <div class="impact-item"><span class="impact-val">Docker</span><span class="impact-key">Containerised</span></div>
+      </div>
+      <div class="proj-tech"><span>Spring Boot</span><span>React</span><span>MySQL</span><span>AWS EC2</span><span>AWS S3</span><span>Docker</span><span>Stripe</span></div>
+    </div>
+
+    <!-- 05 Smart TMS -->
+    <div class="proj-card reveal delay-4">
+      <div class="proj-num">05 / Transport &middot; Python &middot; Data</div>
+      <div class="proj-header">
+        <h2 class="proj-name">Smart TMS &mdash; Transport Management System</h2>
+        <span class="proj-category">QR Code Entry & Exit System</span>
+      </div>
+      <p class="proj-desc">Built with React.js, Node.js, and MySQL — SmartTMS replaces paper gate registers with QR code scanning, real-time vehicle tracking, and automated CSV reports. Guards scan vehicles in under a second using their phone camera.</p>
+      <div class="proj-impact">
+        <div class="impact-item"><span class="impact-val">Real-time</span><span class="impact-key">QR Code Scanning</span></div>
+        <div class="impact-item"><span class="impact-val">Auto</span><span class="impact-key">Role-Based Access</span></div>
+      </div>
+      <div class="proj-tech"><span>React.js</span><span>MySQL</span><span>Node.js</span><span>Express.js</span><span>JWTAuth</span></div>
+    </div>
+
+    <!-- 06 DataInsight -->
+    <div class="proj-card reveal delay-5">
+      <div class="proj-num">06 / Cloud &middot; Serverless &middot; AWS Lambda</div>
+      <div class="proj-header">
+        <h2 class="proj-name">DataInsight &mdash; Analytics Dashboard</h2>
+        <span class="proj-category">Cloud</span>
+      </div>
+      <p class="proj-desc">Serverless analytics platform using AWS Lambda + API Gateway for on-demand metric processing. Java Lambda handlers deployed via AWS SAM CLI with PostgreSQL RDS backend and a React + Recharts dashboard frontend. Auto-scales with traffic.</p>
+      <div class="proj-impact">
+        <div class="impact-item"><span class="impact-val">Serverless</span><span class="impact-key">AWS Lambda</span></div>
+        <div class="impact-item"><span class="impact-val">SAM CLI</span><span class="impact-key">IaC Deploy</span></div>
+      </div>
+      <div class="proj-tech"><span>Java</span><span>AWS Lambda</span><span>API Gateway</span><span>PostgreSQL</span><span>React</span><span>AWS SAM</span></div>
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">&#169; 2026 Lalit Gonji &middot; Built with &#10084;&#65039; in Sydney</span>
+      <div class="footer-socials">
+        <a href="https://github.com/La-lit2001" target="_blank" class="social-btn"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/lalitgonji" target="_blank" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:lalitgonji@email.com" class="social-btn"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <button class="back-top" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
