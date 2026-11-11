@@ -1,6 +1,6 @@
  🚀 Lalit Gonji — Portfolio Website
 
-Personal portfolio website showcasing my projects, skills, and experience as a Full Stack Software Engineer based in Sydney, Australia.
+Personal portfolio for Lalit Gonji, an AI data engineer in Sydney. The live site updates only after this repository is redeployed.
 
 ## 🔗 Live Site
 > Deploy to [Netlify](https://netlify.com/drop) by dragging the folder — live in seconds.
@@ -59,6 +59,6 @@ Right click index.html → Open with Live Server
 
 **Lalit Gonji** · Software Engineer · Sydney, Australia
 
-- 🔗 [LinkedIn](https://linkedin.com/in/lalitgonji)
-- 🐙 [GitHub](https://github.com/La-lit2001)
-- 📧 lalitgonji@email.com
+- [LinkedIn](https://www.linkedin.com/in/lalit-gonji/)
+- [GitHub](https://github.com/La-lit2001)
+- lalitgonji@gmail.com
